@@ -5,18 +5,22 @@ function Table() {
     {
       name: "ID",
       selector: (row) => row.id,
+      sortable: true,
     },
     {
       name: "Full Name",
       selector: (row) => row.fullName,
+      sortable: true,
     },
     {
       name: "Height",
       selector: (row) => row.height,
+      sortable: true,
     },
     {
       name: "Weight",
       selector: (row) => row.weight,
+      sortable: true,
     },
   ];
   
@@ -124,6 +128,8 @@ function Table() {
           data={rows}
           fixedHeader
           title='React Data Table Component'
+          pagination
+          selectableRows
         />
       </div>
     </>
