@@ -51,3 +51,9 @@ input[type="search"] {
   text-align: center;
   font-size: 32px;
 }
+
+.sc-guDLey div {
+  background-color: rgb(103, 103, 201);
+  color: white;
+  font-size: 16px;
+}
