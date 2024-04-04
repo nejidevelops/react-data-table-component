@@ -6,18 +6,22 @@ function Table() {
     {
       name: "ID",
       selector: (row) => row.personID,
+      sortable: true,
     },
     {
       name: "Full Name",
       selector: (row) => row.fullName,
+      sortable: true,
     },
     {
       name: "Height",
       selector: (row) => row.height,
+      sortable: true,
     },
     {
-      name: "eyeColor",
+      name: "Eye Color",
       selector: (row) => row.eyeColor,
+      sortable: true,
     },
   ];
 
@@ -147,7 +151,7 @@ function Table() {
       eyeColorValue = row.eyeColor
         .toLowerCase()
         .includes(e.target.value.toLowerCase());
-  
+
       if (personIDValue) {
         searchValue = personIDValue;
       } else if (fullNameValue) {
@@ -157,13 +161,12 @@ function Table() {
       } else {
         searchValue = eyeColorValue;
       }
-  
+
       return searchValue;
     });
 
-    setData(newRows)
+    setData(newRows);
   };
-
 
   return (
     <>
