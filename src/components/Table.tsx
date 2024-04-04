@@ -1,127 +1,129 @@
+import { useState } from "react";
 import DataTable from "react-data-table-component";
 
 function Table() {
   const columns = [
     {
       name: "ID",
-      selector: (row) => row.id,
-      sortable: true,
+      selector: (row) => row.personID,
     },
     {
       name: "Full Name",
       selector: (row) => row.fullName,
-      sortable: true,
     },
     {
       name: "Height",
       selector: (row) => row.height,
-      sortable: true,
     },
     {
-      name: "Weight",
-      selector: (row) => row.weight,
-      sortable: true,
+      name: "eyeColor",
+      selector: (row) => row.eyeColor,
     },
   ];
 
   const rows = [
     {
-      id: 1,
-      fullName: "John Doe",
-      height: "1.75m",
-      weight: "89kg",
+      personID: 1,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
+    },
+
+    {
+      personID: 2,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 2,
-      fullName: "Jane Doe",
-      height: "1.64m",
-      weight: "55kg",
+      personID: 3,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
+    },
+
+    {
+      personID: 4,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 3,
-      fullName: "Sheera Maine",
-      height: "1.69m",
-      weight: "74kg",
+      personID: 5,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
+    },
+
+    {
+      personID: 6,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 4,
-      fullName: "Samantha",
-      height: "1.75m",
-      weight: "69kg",
+      personID: 7,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
+    },
+
+    {
+      personID: 8,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 5,
-      fullName: "John Doe",
-      height: "1.75m",
-      weight: "89kg",
+      personID: 9,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 6,
-      fullName: "Jane Doe",
-      height: "1.64m",
-      weight: "55kg",
+      personID: 10,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 7,
-      fullName: "Sheera Maine",
-      height: "1.69m",
-      weight: "74kg",
+      personID: 11,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 8,
-      fullName: "Samantha",
-      height: "1.75m",
-      weight: "69kg",
+      personID: 12,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 9,
-      fullName: "John Doe",
-      height: "1.75m",
-      weight: "89kg",
+      personID: 13,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 10,
-      fullName: "Jane Doe",
-      height: "1.64m",
-      weight: "55kg",
+      personID: 14,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 11,
-      fullName: "Sheera Maine",
-      height: "1.69m",
-      weight: "74kg",
+      personID: 15,
+      fullName: "Kate Shein",
+      height: "1.79m",
+      eyeColor: "blue",
     },
     {
-      id: 12,
-      fullName: "Samantha",
-      height: "1.75m",
-      weight: "69kg",
-    },
-    {
-      id: 13,
-      fullName: "John Doe",
-      height: "1.75m",
-      weight: "89kg",
-    },
-    {
-      id: 14,
-      fullName: "Jane Doe",
-      height: "1.64m",
-      weight: "55kg",
-    },
-    {
-      id: 15,
-      fullName: "Sheera Maine",
-      height: "1.69m",
-      weight: "74kg",
-    },
-    {
-      id: 16,
-      fullName: "Samantha",
-      height: "1.75m",
-      weight: "69kg",
+      personID: 16,
+      fullName: "Isabella Thompson",
+      height: "1.79m",
+      eyeColor: "blue",
     },
   ];
+
   return (
     <>
       <div className="container my-5">
