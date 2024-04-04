@@ -124,6 +124,47 @@ function Table() {
     },
   ];
 
+  const [data, setData] = useState(rows);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let searchValue: boolean;
+    let personIDValue: boolean;
+    let fullNameValue: boolean;
+    let heightValue: boolean;
+    let eyeColorValue: boolean;
+
+    const newRows = rows.filter((row) => {
+      personIDValue = row.personID
+        .toString()
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      fullNameValue = row.fullName
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      heightValue = row.height
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+      eyeColorValue = row.eyeColor
+        .toLowerCase()
+        .includes(e.target.value.toLowerCase());
+  
+      if (personIDValue) {
+        searchValue = personIDValue;
+      } else if (fullNameValue) {
+        searchValue = fullNameValue;
+      } else if (heightValue) {
+        searchValue = heightValue;
+      } else {
+        searchValue = eyeColorValue;
+      }
+  
+      return searchValue;
+    });
+
+    setData(newRows)
+  };
+
+
   return (
     <>
       <div className="container my-5">
@@ -132,11 +173,12 @@ function Table() {
             type="search"
             className="form-control-sm border ps-3"
             placeholder="Search"
+            onChange={handleSearch}
           />
         </div>
         <DataTable
           columns={columns}
-          data={rows}
+          data={data}
           fixedHeader
           title="React Data Table Component"
           pagination
