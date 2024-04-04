@@ -23,7 +23,7 @@ function Table() {
       sortable: true,
     },
   ];
-  
+
   const rows = [
     {
       id: 1,
@@ -72,7 +72,8 @@ function Table() {
       fullName: "Samantha",
       height: "1.75m",
       weight: "69kg",
-    },    {
+    },
+    {
       id: 9,
       fullName: "John Doe",
       height: "1.75m",
@@ -95,7 +96,8 @@ function Table() {
       fullName: "Samantha",
       height: "1.75m",
       weight: "69kg",
-    },    {
+    },
+    {
       id: 13,
       fullName: "John Doe",
       height: "1.75m",
@@ -123,11 +125,18 @@ function Table() {
   return (
     <>
       <div className="container my-5">
+        <div>
+          <input
+            type="search"
+            className="form-control-sm border ps-3"
+            placeholder="Search"
+          />
+        </div>
         <DataTable
           columns={columns}
           data={rows}
           fixedHeader
-          title='React Data Table Component'
+          title="React Data Table Component"
           pagination
           selectableRows
         />
